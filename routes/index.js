@@ -13,4 +13,12 @@ router.get('/stylesheets/style.css', (req, res) => {
   res.sendFile(stylePath);
 });
 
+router.get( '/users/:name', (req, res) => {
+  let user = req.params.name;
+  let tweets = tweetBank.list().filter( obj => obj.name === user);
+
+  res.render('index', { tweets: tweets });
+});
+
+
 module.exports = router;

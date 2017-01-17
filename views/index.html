@@ -15,7 +15,12 @@
 
       <!-- display tweets here -->
       {% for tweet in tweets %}
-        <li>{{tweet.name}} tweeted: {{tweet.content}}</li>
+        <div class = 'tweetbox'>
+          <img></img>
+          <h5 class = 'content by'>{{tweet.name}}</h5>
+          <li class = 'content'>{{tweet.content}}</li>
+          <a class = 'content' href = 'http://lorempixel.com/128/128'>Re-tweet</a>
+        </div>
       {% endfor %}
 
     </div>
