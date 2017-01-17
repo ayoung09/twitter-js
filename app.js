@@ -9,6 +9,7 @@ const port = 3000;
 app.engine('html', nunjucks.render);
 
 app.set('view engine', 'html');
+app.use(express.static('public'))
 
 nunjucks.configure('views', {noCache: true});
 
