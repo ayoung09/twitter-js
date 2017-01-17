@@ -1,9 +1,10 @@
 const _ = require('lodash');
 
 const data = [];
-
+var totalTweets = 0;
 function add (name, content) {
-  data.push({ name: name, content: content });
+  totalTweets++;
+  data.push({ name: name, content: content, id: totalTweets });
 }
 
 function list () {
