@@ -10,14 +10,6 @@ app.engine('html', nunjucks.render);
 
 app.set('view engine', 'html');
 
-var locals =
-  {title: 'twitter jr',
-  people:
-    [{name: 'Gandalf'},
-    {name: 'Frodo'},
-    {name: 'Hermione'}]
-  };
-
 nunjucks.configure('views', {noCache: true});
 
 
